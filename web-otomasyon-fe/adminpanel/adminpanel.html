@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDMUUD ADMİN PANELİ</title>
+    <link rel="stylesheet" href="adminpanel.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <form id="loginForm" >
+            <h2 class="h2">ADMİN PANEL</h2>
+            <div class="input-group">
+                <label class="username-label">
+                    <input id="username" aria-label="kullanıcı adı" aria-required="true" autocapitalize="off" maxlength="75" class="input-field" type="text" name="username" placeholder="kullanıcı adı" required>
+                </label>
+                <label class="password-label">
+                    <input id="password" aria-label="Şifre" aria-required="true" autocapitalize="off" class="input-field" type="password" name="password" placeholder="şifre" required>
+                </label>   
+                <button id="loginbutton" type="submit" class="submit-button">Giriş Yap</button>
+            </div>
+        </form>
+        <h3 class="h3">
+            <span class="red">RED</span>MUUD SOFTWARE
+        </h3>
+    </div>
+</div>
+<script src="adminpanel.js"></script>
+</body>
+</html>

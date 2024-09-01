@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="urunsorgula.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Sorgula</title>
+</head>
+<body>
+<div class="table-container">
+    <table id="productTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>ÜRÜN ADI</th>
+            <th>MARKA</th>
+            <th>ALIŞ FİYATI(₺)</th>
+            <th>SATIŞ FİYATI(₺)</th>
+            <th>STOK ADEDİ</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        <!-- Dinamik veri buraya eklenecek -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>LÜTFEN SORGULAMAK İSTEDİĞİNİZ ÜRÜNÜN ADINI GİRİNİZ</h2>
+    <input type="text" id="queryInput" placeholder="Sorgu girin..." />
+    <br />
+    <button onclick="executeQuery()">Sorgula</button>
+</div>
+
+<script src="urunsorgula.js"></script>
+</body>
+</html>
+

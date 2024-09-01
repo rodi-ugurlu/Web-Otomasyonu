@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Takip Otomasyonu</title>
+    <link rel="stylesheet" href="urunlistele.css">
+</head>
+<body>
+<div class="container">
+    <h2>ÜRÜN LİSTESİ</h2>
+    <table id="productTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>ÜRÜN ADI</th>
+            <th>MARKA</th>
+            <th>ALIŞ FİYATI(₺)</th>
+            <th>SATIŞ FİYATI(₺)</th>
+            <th>STOK ADEDİ</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        <!-- Dinamik veri buraya eklenecek -->
+        </tbody>
+    </table>
+    <div class="buttons">
+        <button onclick="goBack()">Geri</button>
+        <button onclick="removeSelected()">Kaldır</button>
+        <button onclick="yenile()">Yenile</button>
+    </div>
+</div>
+<script src="urunlistele.js"></script>
+</body>
+</html>
