@@ -10,6 +10,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     @Query("SELECT p FROM Product p WHERE LOWER(p.urunadi) LIKE LOWER(CONCAT('%', :urunadi, '%'))")
     List<Product> urunAdinaGoreBul(@Param("urunadi") String urunadi);
+
 }
 
 

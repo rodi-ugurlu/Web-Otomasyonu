@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
+    <link rel="stylesheet" href="urunguncelle.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ürün Güncelleme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="table-container">
+    <table id="productTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>MARKA</th>
+            <th>ÜRÜN ADI</th>
+            <th>ALIŞ FİYATI(₺)</th>
+            <th>SATIŞ FİYATI(₺)</th>
+            <th>STOK ADEDİ</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        <!-- Dinamik veri burada goruntulenmekte -->
+        </tbody>
+    </table>
+</div>
+<input id="aramafield" type="text" placeholder="Ürün Ara">
+<button id="aramaButonu" onclick="executeQuery()">Ara</button>
+<h2 id="yazim" style="color: #DB3D4B">LÜTFEN GÜNCELLEMEK İSTEDİĞİNİZ ÜRÜNÜN BİLGİLERİNİ GİRİNİZ</h2>
 
+<div class="form-group">
+    <label for="idField">ID:</label>
+    <input id="idField" type="text" placeholder="ID">
+</div>
+
+<div class="form-group">
+    <label for="markafield">Marka:</label>
+    <input id="markafield" type="text" placeholder="MARKA">
+</div>
+
+<div class="form-group">
+    <label for="urunadifield">Ürün Adı:</label>
+    <input id="urunadifield" type="text" placeholder="ÜRÜN ADI">
+</div>
+
+<div class="form-group">
+    <label for="alisfiyatfield">Alış Fiyatı (₺):</label>
+    <input id="alisfiyatfield" type="text" placeholder="ALIŞ FİYATI">
+</div>
+
+<div class="form-group">
+    <label for="satisfiyatfield">Satış Fiyatı (₺):</label>
+    <input id="satisfiyatfield" type="text" placeholder="SATIŞ FİYATI">
+</div>
+
+<div class="form-group">
+    <label for="stokfield">Stok Adedi:</label>
+    <input id="stokfield" type="text" placeholder="STOK ADEDİ">
+</div>
+
+<button id="guncelleButonu" onclick="updateProduct()">GÜNCELLE</button>
+
+<script src="urunguncelle.js"></script>
 </body>
 </html>
