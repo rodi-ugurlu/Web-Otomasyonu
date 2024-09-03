@@ -24,4 +24,7 @@ public class ProductManager implements ProductService {
         guncellencekUrun.setStok(product.getStok());
         return productRepository.save(guncellencekUrun);
     }
+
+
+
 }

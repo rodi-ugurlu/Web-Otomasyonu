@@ -62,19 +62,55 @@ input[type="text"] {
     font-size: 18px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-button {
-    padding: 15px 30px;
+#sorguButonu, .action-button {
+    padding: 12px 20px;
     background-color: #0056b3;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#sorguButonu:hover, .action-button:hover {
+    background-color: #004494;
+}
+
+.action-button {
+    margin-right: 10px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Tablo içinde kullanılan butonlar */
+.action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.action-buttons button {
+    flex: 1;
+}
+
+button.silButonu {
+    background-color: #d9534f;
+}
+
+button.guncelleButonu {
+    background-color: #5bc0de;
+}
+
+button.silButonu:hover {
+    background-color: #c9302c;
+}
+
+button.guncelleButonu:hover {
+    background-color: #31b0d5;
 }

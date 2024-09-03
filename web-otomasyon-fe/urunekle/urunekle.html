@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
+    <link rel="stylesheet" href="urunekle.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Ekle</title>
 </head>
 <body>
+<div class="container">
+    <h2>[ÜRÜN ID'Sİ OTOMATİK TANIMLANMAKTADIR]</h2>
 
+    <form id="urunForm">
+        <label for="markaField">Marka</label>
+        <input type="text" id="markaField" placeholder="Marka" required>
+
+        <label for="urunadiField">Ürün Adı</label>
+        <input type="text" id="urunadiField" placeholder="Ürün Adı" required>
+
+        <label for="alisfiyatField">Alış Fiyatı (₺)</label>
+        <input type="text" id="alisfiyatField" placeholder="Alış Fiyatı" required>
+
+        <label for="satisfiyatField">Satış Fiyatı (₺)</label>
+        <input type="text" id="satisfiyatField" placeholder="Satış Fiyatı" required>
+
+        <label for="stokField">Stok Adedi</label>
+        <input type="text" id="stokField" placeholder="Stok Adedi" required>
+
+        <div class="buttons">
+            <button type="button" onclick="goBack()">Geri</button>
+            <button type="button" onclick="urunEkle()">Ekle</button>
+        </div>
+    </form>
+
+    <footer>
+        <p><span class="red">RED</span>MUUD SOFTWARE</p>
+    </footer>
+</div>
+
+<script src="urunekle.js"></script>
 </body>
 </html>

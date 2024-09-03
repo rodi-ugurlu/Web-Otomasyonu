@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <link rel="stylesheet" href="../bootstrap-css/bootstrap.min.css">
     <link rel="stylesheet" href="urunsorgula.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,10 +30,31 @@
     <h2>LÜTFEN SORGULAMAK İSTEDİĞİNİZ ÜRÜNÜN ADINI GİRİNİZ</h2>
     <input type="text" id="queryInput" placeholder="Ürün Ara..." />
     <br />
-    <button onclick="executeQuery()">Sorgula</button>
+    <button id="sorguButonu" onclick="executeQuery()">Sorgula</button>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">HATA!!!!!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Aradığınız ürün bulunamadı.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Anladım</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="../bootstrap-js/bootstrap.min.js"></script>
 <script src="urunsorgula.js"></script>
+
 </body>
 </html>
-

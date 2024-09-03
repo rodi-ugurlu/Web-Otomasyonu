@@ -5,4 +5,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface ProductService  {
     Product updateProduct(Product product);
+
 }

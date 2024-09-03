@@ -45,5 +45,10 @@ private final ProductService productService;
         Product updatedProduct=productService.updateProduct(product);
         return ResponseEntity.ok(updatedProduct);
     }
+    @PostMapping("/addProduct")
+    public ResponseEntity<Product> addProduct(@RequestBody Product product){
+         productRepository.save(product);
+         return ResponseEntity.ok(product);
+    }
 }
 

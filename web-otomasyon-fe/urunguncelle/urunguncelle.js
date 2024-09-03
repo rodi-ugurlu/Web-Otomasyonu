@@ -1,12 +1,11 @@
 let selectedRow = null;
 
 // Input alanlarını tanımla
-const idField = document.getElementById("idField");
 const markaField = document.getElementById("markafield");
-const urunadiField = document.getElementById("urunadifield");
-const alisfiyatField = document.getElementById("alisfiyatfield");
-const satisfiyatField = document.getElementById("satisfiyatfield");
-const stokField = document.getElementById("stokfield");
+const urunadiField = document.getElementById("urunadiField");
+const alisfiyatField = document.getElementById("alisfiyatField");
+const satisfiyatField = document.getElementById("satisfiyatField");
+const stokField = document.getElementById("stokField");
 
 // Satır seçme işlemi
 function selectRow(row) {
@@ -20,7 +19,6 @@ function selectRow(row) {
     selectedRow.classList.add("selected");
 
     // Seçilen satırdaki hücrelerden verileri al ve input alanlarına aktar
-    idField.value = selectedRow.cells[0].textContent;
     urunadiField.value = selectedRow.cells[1].textContent;
     markaField.value = selectedRow.cells[2].textContent;
     alisfiyatField.value = selectedRow.cells[3].textContent;
