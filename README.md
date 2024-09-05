@@ -1,0 +1,7 @@
+![guncelle2](https://github.com/user-attachments/assets/69ca8ef9-9178-43ec-b447-e083763988cb)
+![adminpanel](https://github.com/user-attachments/assets/d5bdb554-982f-4bd8-8ae0-3186995f2cbe)
+![Screenshot 2024-09-05 223303](https://github.com/user-attachments/assets/9b75dae5-af09-403b-9e9d-e30f0f11d36b)
+![Screenshot 2024-09-05 223224](https://github.com/user-attachments/assets/2ff067a8-a9ba-4908-803c-2e516db7ed23)
+![Screenshot 2024-09-05 223108](https://github.com/user-attachments/assets/e91335fb-ca23-470a-8b34-0f7b2460ea5b)
+![Screenshot 2024-09-05 223026](https://github.com/user-attachments/assets/db84cba8-977d-443a-950a-720294956e6a)
+![Screenshot 2024-09-05 222935](https://github.com/user-attachments/assets/b389dfc7-27bd-4aeb-b637-8eeae25b03b2)
