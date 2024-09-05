@@ -1,24 +1,19 @@
 let selectedRow = null;
-
-// Input alanlarını tanımla
+const saveChangeButton=document.getElementById("saveChangesButton")
 const markaField = document.getElementById("markafield");
 const urunadiField = document.getElementById("urunadiField");
 const alisfiyatField = document.getElementById("alisfiyatField");
 const satisfiyatField = document.getElementById("satisfiyatField");
 const stokField = document.getElementById("stokField");
 
-// Satır seçme işlemi
 function selectRow(row) {
-    // Önceki seçilen satırın 'selected' sınıfını kaldır
     if (selectedRow !== null) {
         selectedRow.classList.remove("selected");
     }
 
-    // Yeni seçilen satırı 'selected' olarak işaretle
     selectedRow = row;
     selectedRow.classList.add("selected");
 
-    // Seçilen satırdaki hücrelerden verileri al ve input alanlarına aktar
     urunadiField.value = selectedRow.cells[1].textContent;
     markaField.value = selectedRow.cells[2].textContent;
     alisfiyatField.value = selectedRow.cells[3].textContent;
@@ -35,9 +30,9 @@ function executeQuery() {
         .then(response => response.json())
         .then(products => {
             const tableBody = document.getElementById('tableBody');
-            tableBody.innerHTML = ''; // Tabloyu temizle
+            tableBody.innerHTML = '';
 
-            // Gelen ürünleri tabloya ekle
+
             products.forEach(product => {
                 const row = `<tr onclick="selectRow(this)">
                                 <td>${product.id}</td>
@@ -64,7 +59,7 @@ function updateProduct() {
             },
             method: "PUT",
             body: JSON.stringify({
-                id: selectedRow.cells[0].textContent,  // Seçilen satırdaki id'yi al
+                id: selectedRow.cells[0].textContent,
                 urunadi: urunadiField.value,
                 marka: markaField.value,
                 alisfiyat: alisfiyatField.value,
@@ -87,5 +82,4 @@ function updateProduct() {
     }
 }
 
-// Debugging için seçili satırın ID'sini logla
-console.log(selectedRow ? selectedRow.cells[0].textContent : "Hiçbir satır seçilmedi");
+

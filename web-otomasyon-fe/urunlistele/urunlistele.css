@@ -4,19 +4,18 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
 }
 
-.container {
+#urunTable {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     width: 70%;
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,7 +24,7 @@ body {
 
 h2 {
     text-align: center;
-    margin-bottom: 0px; /* Başlık ve tablo arasındaki boşluğu azaltın */
+    margin-bottom: 0px;
 }
 
 table {
@@ -79,3 +78,26 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+#sorguContainer {
+    background-color: #fff;
+    padding: 20px; /* Reduced padding to decrease height */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 60%; /* Increased width */
+    max-width: 800px; /* Increased maximum width */
+    margin-top: 20px;
+}
+#queryInput{
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+}
+#sorguButonu{
+    margin-top: 10px;
+    height: 40px;
+    width: 20%;
+}
+
+

@@ -9,7 +9,6 @@ function executeQuery() {
             const tableBody = document.getElementById('tableBody');
             tableBody.innerHTML = '';
             if (products.length === 0) {
-                // Ürün bulunamadığında modal gösteriliyor
                 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
                     keyboard: true
                 });
@@ -39,7 +38,6 @@ function executeQuery() {
         })
         .catch(error => {
             console.error('Error fetching products:', error);
-            // Hata durumunda modal gösteriliyor
             var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
                 keyboard: true
             });

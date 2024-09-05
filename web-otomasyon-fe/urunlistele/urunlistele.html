@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stok Takip Otomasyonu</title>
+    <link rel="stylesheet" href="../bootstrap-css/bootstrap.min.css">
     <link rel="stylesheet" href="urunlistele.css">
 </head>
 <body>
-<div class="container">
+<div id="urunTable" class="container">
     <h2>ÜRÜN LİSTESİ</h2>
     <table id="productTable">
         <thead>
         <tr>
             <th>ID</th>
-            <th>ÜRÜN ADI</th>
             <th>MARKA</th>
+            <th>ÜRÜN ADI</th>
             <th>ALIŞ FİYATI(₺)</th>
             <th>SATIŞ FİYATI(₺)</th>
             <th>STOK ADEDİ</th>
+            <th>İŞLEM</th>
         </tr>
         </thead>
         <tbody id="tableBody">
@@ -26,10 +28,82 @@
     </table>
     <div class="buttons">
         <button onclick="goBack()">Geri</button>
-        <button onclick="removeSelected()">Kaldır</button>
-        <button onclick="yenile()">Yenile</button>
     </div>
 </div>
+
+<div id="sorguContainer" class="container">
+    <h5>LÜTFEN SORGULAMAK İSTEDİĞİNİZ ÜRÜNÜN ADINI GİRİNİZ</h5>
+    <input type="text" id="queryInput" placeholder="Ürün Ara..." />
+    <br />
+    <button id="sorguButonu" onclick="executeQuery()">Sorgula</button>
+</div>
+
+<!-- Hata Modalı -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">HATA!!!!!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Anladım</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Ürün Güncelleme Modalı -->
+<div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="updateProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateProductModalLabel">Ürün Güncelle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateProductForm">
+                    <div class="mb-3">
+                        <label for="markaField" class="form-label">Marka</label>
+                        <input type="text" class="form-control" id="markaField">
+                    </div>
+                    <div class="mb-3">
+                        <label for="urunadField" class="form-label">Ürün Adı</label>
+                        <input type="text" class="form-control" id="urunadField" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="alisfiyatField" class="form-label">Alış Fiyatı(₺)</label>
+                        <input type="number" class="form-control" id="alisfiyatField">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="satisfiyatField" class="form-label">Satış Fiyatı(₺)</label>
+                        <input type="number" class="form-control" id="satisfiyatField">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="stokField" class="form-label">Stok Adedi</label>
+                        <input type="number" class="form-control" id="stokField" >
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary" id="saveChangesButton" onclick="updateMyProduct()">Ürünü Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="../bootstrap-js/bootstrap.min.js"></script>
 <script src="urunlistele.js"></script>
 </body>
 </html>
