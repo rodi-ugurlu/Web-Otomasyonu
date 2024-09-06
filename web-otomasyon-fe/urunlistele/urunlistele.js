@@ -5,7 +5,7 @@ const alisfiyatField = document.getElementById('alisfiyatField');
 const satisfiyatField = document.getElementById('satisfiyatField');
 const stokField = document.getElementById('stokField');
 
-window.onload = function() {
+window.onload = function () {
     fetch("http://localhost:8080/api/products")
         .then(response => response.json())
         .then(products => {
@@ -148,7 +148,18 @@ function urunGuncelle(button) {
     stokField.value = selectedRow.cells[5].textContent;
 }
 
-function updateMyProduct(){
+function updateMyProduct() {
+    if (alisfiyatField.value < 0 || satisfiyatField.value < 0 || stokField.value < 0) {
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+            keyboard: true
+        });
+        document.querySelector('.modal-body').innerText = "EKSI DEGER GIRMEYINIZ";
+        document.getElementById("exampleModalLabel").innerText = "HATA!!!!!!!"
+        var guncelleModal = bootstrap.Modal.getInstance(document.getElementById('updateProductModal'));
+        guncelleModal.hide();
+        myModal.show();
+        return;
+    }
     if (selectedRow !== null) {
         fetch("http://localhost:8080/api/products/updateProduct", {
             headers: {
@@ -170,7 +181,7 @@ function updateMyProduct(){
                         keyboard: true
                     });
                     document.querySelector('.modal-body').innerText = "ÜRÜN BAŞARIYLA GÜNCELLENDİ";
-                    document.getElementById("exampleModalLabel").innerText="BAŞARILI"
+                    document.getElementById("exampleModalLabel").innerText = "BAŞARILI"
                     myModal.show();
                     var guncelleModal = bootstrap.Modal.getInstance(document.getElementById('updateProductModal'));
                     guncelleModal.hide();
@@ -184,6 +195,7 @@ function updateMyProduct(){
     } else {
         console.error("Hiçbir satır seçilmedi.");
     }
+
 }
 
 

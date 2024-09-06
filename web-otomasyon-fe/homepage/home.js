@@ -9,14 +9,9 @@ listeleButonu.addEventListener("click",()=>{
 })
 
 
-sorgulaButonu.addEventListener("click",()=>{
-    window.location.href="../urunsorgulama/urunsorgula.html"
-})
+
 
 ekleButonu.addEventListener("click",()=>{
     window.location.href="../urunekle/urunekle.html"
-})
-guncelleButonu.addEventListener("click",()=>{
-    window.location.href="../urunguncelle/urunguncelle.html"
 })
 

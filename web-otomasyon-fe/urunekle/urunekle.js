@@ -4,6 +4,17 @@ const alisfiyatField = document.getElementById("alisfiyatField");
 const satisfiyatField = document.getElementById("satisfiyatField");
 const stokField = document.getElementById("stokField");
 function urunEkle() {
+    if(alisfiyatField.value<0 || satisfiyatField.value<0 || stokField.value<0){
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+            keyboard: true
+        });
+        document.querySelector('.modal-body').innerText = "LÜTFEN GİRDİĞİNİZ DEĞERLERİ TEKRAR KONTROL EDİNİZ";
+        document.getElementById("exampleModalLabel").innerText = "HATA!!!!!!!!!!!!!!";
+        myModal.show();
+        return;
+    }
+
+
     if (markaField.value == "" || urunadiField.value == "" || alisfiyatField.value == "" || satisfiyatField.value == "" || stokField.value == "") {
         var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
             keyboard: true
@@ -58,5 +69,5 @@ function urunEkle() {
 }
 
 function goBack() {
-    window.history.back();
+    window.location.href="../homepage/home.html";
 }
