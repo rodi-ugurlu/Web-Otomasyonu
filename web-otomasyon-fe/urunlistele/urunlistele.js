@@ -42,7 +42,7 @@ function goBack() {
 }
 
 function removeSelected(button) {
-    var row = button.parentNode.parentNode; // Butonun bulunduğu satırı seçmek için parentNode kullan
+    var row = button.parentNode.parentNode;
     if (selectedRow !== null) {
         selectedRow.classList.remove("selected");
     }
@@ -56,7 +56,7 @@ function removeSelected(button) {
         })
             .then(response => {
                 if (response.ok) {
-                    selectedRow.remove(); // Satırı tablodan kaldır
+                    selectedRow.remove();
                     selectedRow = null;
                 } else if (selectedRow === null) {
                     // Hata yönetimi
@@ -129,7 +129,7 @@ function executeQuery() {
 }
 
 function urunGuncelle(button) {
-    var row = button.parentNode.parentNode; // Butonun bulunduğu satırı seçmek için parentNode kullan
+    var row = button.parentNode.parentNode;
     var guncelleModal = new bootstrap.Modal(document.getElementById('updateProductModal'), {
         keyboard: true
     });
